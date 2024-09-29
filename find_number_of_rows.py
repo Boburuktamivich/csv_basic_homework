@@ -1,3 +1,4 @@
+import csv
 def find_number_of_rows(data):
     """
     Find the number of rows in CSV.
@@ -6,6 +7,8 @@ def find_number_of_rows(data):
     Return:
         int: Number of rows.
     """
-    return
-
-# Read the csv file
+    reader = csv.reader(data)
+    a = list(reader)
+    return len(a)
+data = open("data.csv", 'r')
+print(find_number_of_rows(data))
